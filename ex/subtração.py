@@ -1,4 +1,4 @@
-print("CONTINHA DE DIMINUIR")
+print("CONTINHA DE DIMINUIR PRA LEIGOS")
 
 c = int(input("digita um numero ae jao"))
 d = int(input("digita otro ae fé"))
