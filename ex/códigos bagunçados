@@ -1,0 +1,263 @@
+#total de moedas
+centavos = 290
+totalmoedas = 0
+
+moedas = [50, 25, 10, 5, 1]
+
+for i in moedas:
+  nmoedas = centavos // i
+  centavos = centavos % i
+  totalmoedas += nmoedas
+  
+  if i == 50:
+   cinq = nmoedas #guarda o total de moedas de 50 usadas
+
+  if i == 25: 
+    vint = nmoedas #guarda o total de moedas de 25 usadas 
+
+  if i == 10:
+    dez = nmoedas #guarda o total de moedas de 10 usadas 
+
+  if i == 5:
+    cinc = nmoedas #guarda o total de moedas de 5 usadas 
+  
+  if i == 1:
+    um = nmoedas #guarda o total de moedas de 1 usadas 
+
+print(f"o total de moedas é {totalmoedas}, são {cinq} moedas de 50, {vint} moedas de 25, {dez} moedas de 10, {cinc} moedas de 5 e {um} moedas de 1.")
+
+
+
+
+'''
+Faça um programa que transforme uma temperatura fornecida em Celsius
+para a correspondente em Fahrenheit. A fórmula de conversão de Celsius
+para Fahrenheit é a seguinte: C = (5/9) * (F – 32).
+'''
+
+C = float(input("digite temperatura em celsius p converter"))
+F = C * 1.8 + 32
+
+C = (5/9) * (F-32)
+print (F)
+---
+
+
+#inverso do numero
+
+
+num = int(input("número:"))
+
+c = num % 10
+c2 = num // 10
+c = c * 10 + c2
+
+print(c)
+
+---
+
+
+
+''' Faça um programa para, a partir de um valor informado em centavos, indicar a menor quantidade de moedas que representa esse valor. 
+
+OBS: Considere moedas de 1,05,10, 25 e 50 centavos, e 1 real.
+
+Exemplo: Para o valor 290 centavos, a menor quantidade de moedas é 2 moedas de 1 real, 1 moeda de 50 centavos, 1 moeda de 25 centavos, 1 moeda de 10 centavos e 1 moeda de 5 centavos. '''
+
+
+---
+
+'''
+def numero_moedas(centavos):
+    n_moedas_total = 0
+    moedas_utilizadas = []
+
+    if centavos < 1:
+        return n_moedas_total, moedas_utilizadas
+
+    moedas = [50, 25, 10, 5, 1] #i
+
+    for moeda in moedas: #moeda = i
+        n_moedas = centavos // moeda #vai pegar as moedas e dividir pelo primeiro i do vetor
+        centavos = centavos % moeda #o que der de resto, vai dividir pelo proximo i
+        n_moedas_total += n_moedas
+        moedas_utilizadas.extend([moeda] * n_moedas)
+        if centavos == 0:
+            break
+
+    return n_moedas_total, moedas_utilizadas
+    '''
+
+
+
+
+---
+#mexendo com listas.
+
+# características de listas: os elementos são mutaveis; você pode manipular; se usa colchetes []
+
+B = ["b1", "b2", "b3", "b4"] #contagem de elementos começa com 0. B recebe elementos
+B[2] = "a1" #vai substituir b3 por a1
+
+B.append("a2") #adiciona elemento
+B.insert(5, "a3") #adiciona elemento na posição desejada
+B.pop(1) # pop apaga elemento, no caso vai apagar o elemento da posição 1, ou seja, b2
+
+print(B)
+
+
+#if = se
+#elif = se a condição anterior não for verdade, tente essa
+#else = captura qualquer coisa que não seja detectada pelas condições anteriores.
+
+# podemos usar else sem elif
+
+'''
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+'''
+
+'''
+a = 2
+b = 3
+
+print("A") if a > b else print("B") 
+'''
+
+'''
+mylist = ["apple", "banana", "cherry"]
+x = len("apple")
+print(x) #vai me printar a quantidade de letras existentes em APPLE (5)
+'''
+
+r = float (input("insert a number "))
+sqrt = r ** (1/2)
+print (sqrt)
+
+
+
+
+
+---
+'''
+Fazer um programa que peça 2 números e imprima o maior.
+
+num1 = int(input("digite um numero inteiro"))
+num2 = int(input("digite outro numero inteiro"))
+
+if (num1 > num2):
+ print(num1)
+ 
+if (num1 == num2):
+ print("são iguais")
+ 
+elif (num1 < num2):
+ print("o maior é o:" ,num2)
+
+---------------------------------
+contador 
+
+cont = 0
+while cont < 5:
+  print(cont)
+  cont +=1
+
+
+  ---
+
+
+  def primo(n):
+  cont = 0
+  for divisor in range (1, n+1):
+    if n % divisor == 0:
+      cont += 1
+
+  if cont == 2:
+    return True 
+  else:
+    return False
+  
+vet = []
+
+for i in range (1, 26):
+  if i % 2 != 0:
+    vet.append(i)
+
+print(vet)
+-----------------------------
+
+def primo(n):
+  cont = 0
+  for divisor in range (1, n+1):
+    if n % divisor == 0:
+      cont += 1
+
+  if cont == 2:
+    return True 
+  else:
+    return False
+
+vet = []  
+for i in range (300, 751):
+  primo()
+    vet.append(i)
+
+print(vet)
+
+---
+
+def aprender(a, b):
+  x = a + b
+  return x
+
+print(aprender(10, 2))
+print(aprender(24, 2))
+print(aprender(10, 35))
+print(aprender(16, 10))
+print(aprender(22, 2))
+
+---
+
+
+'''
+cont = 0
+
+while cont < 5:
+  cont += 1 #cont += 1 é abreviação de cont = cont + 1
+  print (cont)
+'''
+
+for i in range (1, 11): #contagem de 1 até 10
+  if i % 2 != 0: #se i resto de 2 for diferente de 0
+    print(i) #imprime os números de 1 a 10 q o resto da divisão seja diferente de 0, logo, números impares.
+
+
+
+    print ('-'*40)
+print ('Bem vindos ao Blablabla.')
+print ('-'*40) #repete o print 40x
+
+fim = 202 #finaliza cont em 200
+cont = 98 #definir cont a partir de 100
+
+while cont < fim:
+  cont += 2 
+  print (cont)
+else:
+  print ('Contador encerrado com sucesso.')
+
+
+
+
+
+'''n = int (input("number:"))
+
+cont = 0
+
+for item in range (0, n):
+  item += 1
+  print (item)'''
